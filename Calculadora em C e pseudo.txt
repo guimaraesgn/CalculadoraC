@@ -1,0 +1,68 @@
+Calculadora em C
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+int main()
+{
+	setlocale(LC_ALL,"portuguese");
+	
+	float n1,n2,result;
+	char operacao;
+
+    	printf("CALCULADORA\n\n");
+	printf("Digite o primeiro valor: ");
+	scanf("%f", &n1);	
+	printf("Digite o segundo valor: ");
+	scanf("%f", &n2);
+	printf("\n\nEscolha a operação digitando o seu símbolo:\nSoma (+)\nSubtração (-)\nMultiplicação (*)\nDivisão (/))");
+	scanf(" %c", &operacao);
+	switch(operacao)
+	{
+		case'+': result=n1+n2;
+		printf("O valor da soma é: %f+%f=%f", n1,n2,result);break;
+		case'-': result=n1-n2;
+		printf("O valor da subtração é: %f-%f=%f", n1,n2,result);break;
+		case'*': result=n1*n2;
+		printf("O valor da multipliicação é: %f*%f=%f", n1,n2,result);break;
+		case'/': result=n1/n2;
+		printf("O valos da divisão é: %f/%f=%f", n1,n2,result);break;
+		default:
+		printf("\n Operação invalida\n");break;
+	}
+	system("pause");
+	return 0;
+}
+
+
+
+Calculadora em Pseudocódigo
+
+Calculadora
+
+Inicio
+
+n1,n2,result  real;
+operacao  caratacter;
+
+	Imprima("Calculadora");
+	Imprima("Digite o primeiro valor:");
+	leia(n1);
+	Imprima("Digite o segundo numero:");
+	leia(n2);
+	Imprima("Escolha a operação digitando o seu símbolo:Soma (+)Subtração (-)Multiplicação (*)Divisão (/)");
+	leia(operacao);
+	escolha(operacao)
+	 {
+	   caso'+': result=n1+n2;
+	   escreva("O valor da soma é:", n1,n2,result);pare;
+	   caso'-': result=n1-n2;
+	   escreva("O valor da subtração é:", n1,n2,result);pare;
+	   caso'*': result=n1*n2;
+	   escreva("O valor da multipliicação é:", n1,n2,result);pare;
+	   caso'/': result=n1/n2;
+	   escreva("O valos da divisão é:", n1,n2,result);pare;
+	   caso contrario:
+	   escreva("Operação invalida");pare;
+	}
+Fim.
